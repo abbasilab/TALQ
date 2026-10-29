@@ -2,7 +2,7 @@
 
 Code for the manuscript
 
-> Levesque, M. E., Woolley, J. & Abbasi Asl, R. *TALQ, a reproducible language model questionnaire for dense
+> Levesque, M. E., Poskanzer, K., Woolley, J. & Abbasi-Asl, R. *TALQ, a reproducible language model questionnaire for dense
 > measurement of depressive and anxious states* (2026).
 
 TALQ (text assessment with language model questionnaires) uses a large language model
@@ -116,7 +116,13 @@ not share `data/` or `results/` as they are. `scripts/99_pseudonymize.py` writes
 hashes instead of account names, without post text or text written by the model. The figures contain no
 account names or text.
 
-## License and citation
+# Citation
 
-The code is released under the MIT License (`LICENSE`). The Empath lexicon in `third_party/empath/` keeps
-the license of its authors. If you use this code, please cite the manuscript (`CITATION.cff`).
+```bibtex
+@article{levesque2026talq,
+  title   = {TALQ: A reproducible language model questionnaire for dense measurement of depressive and anxious states},
+  author  = {Levesque, Maxine and Poskanzer, Kira and Woolley, Joshua and Abbasi-Asl, Reza},
+  journal = {psyrxiv},
+  year    = {2026}
+}
+```
