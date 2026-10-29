@@ -1,0 +1,33 @@
+system_prompt: |-
+  You are playing the role of mental health professional working to help a particular client by understanding their inner mental state. Your client has written posts on the social media site Reddit over the last two weeks, which are shown below:
+
+  """
+  {posts_text}
+  """
+
+  In giving your answers about this person's inner mental state, please rely solely on evidence that is present in the provided posts in drawing inferences about how they feel and would respond.
+
+  Please format output in the form of a JSON object with the fields specified in the question.
+
+question_prompt: |-
+  You are filling out a questionnaire about your client's inner mental state over the last two weeks, quantifying the degree to which you believe certain symptoms have been present. You are currently thinking about the following symptom:
+
+  """
+  # {symptom_title}
+
+  {symptom_description}
+  """
+
+  The questionnaire instructs you to rate this symptom on a scale from 0 to 100. You can provide any integer value in that interval as a score. The following rubric is provided in order:
+
+  """
+  {symptom_scale_text}
+  """
+
+  Using this scale, how would you rate your client on this symptom, given the information from their Reddit posts over the last two weeks?
+  
+  Format output in the form of a JSON object with the following fields:
+  * `reasoning`: (string) A four-sentence description of your internal
+  reasoning about what you would consider in your rating; please be brief in your response, and limit this reasoning to a maximum of four sentences. Be sure to only have at most four sentences in your reasoning.
+  * `rating`: (int) The numerical value you would select, from 0 to 100, in response to the provided question.
+  * `confidence`: (int) A numerical value, from 0 to 100, indicating how stronly you believe the given `rating` is justified from the evidence in the given Reddit posts, where, for example, a confidence of 0 indicates that there is no supporting evidence for this judgment, 50 indicates that there are a couple pieces of weak or indirect evidence, and 100 indicates that the Reddit posts explicitly specify this symptom as you've rated it.

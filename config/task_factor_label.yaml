@@ -1,0 +1,16 @@
+system_prompt: |
+  You are playing the role of mental health professional working to help on a research project in which you and your colleagues are trying to understand social media users' inner mental states.
+
+  Please format output in the form of a JSON object with the fields specified in the question.
+
+question_prompt: |
+  As part of the analysis pipeline that you and your team are working on, you have used nonnegative matrix factorization to determine a number of latent factors of individuals inner mental state, with each factor composed of a weighted combination of individual raw symptom axes that were diriectly scored. You are tasked with determining a suitable concise label to use for the factor corresponding to one particular combination. The top contributors to this factor are:
+
+  {weight_table}
+
+  Thinking about this factor as assessing a single underlying dimension of inner mental state that is composed of this combination of symptoms, what would be a concise label for referencing the NMF latent factor produced from this weighting that conveys what is the underlying semantics of this particular combination? Take into account the relative weights of the individual constitutent symptoms in making your determination. Try to make the title as concise as possible, aiming for no more than four words, and ideally reducing to a single word.
+
+  Format output in the form of raw JSON (i.e., do not include any Markdown formatting enclosing the JSON content) with the following fields:
+  * `reasoning`: (string) A four-sentence description of your internal
+  reasoning about what you would consider in determining a suitable concise label; please be brief in your response, and limit this reasoning to a maximum of four sentences. Be sure to only have at most four sentences in your reasoning.
+  * `factor_title_candidates`: (array of strings) Three candidate factor titles you would choose. Try to make the title as concise as possible, aiming for no more than four words, and ideally reducing to a single word.

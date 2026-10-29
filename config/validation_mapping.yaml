@@ -1,0 +1,147 @@
+irf:
+  tbe:
+    symptoms:
+    - loneliness
+    - others_dislike
+    - others_unfriendly
+    - ip_sensitivity
+    factor: Social strain
+    direction: 1
+  pbu:
+    symptoms:
+    - worthlessness
+    - self_punishment
+    - guilt
+    - si
+    inverse_symptoms:
+    - feeling_needed
+    factor: Negative self-reflection
+    direction: 1
+lost:
+  low_self_esteem:
+    symptoms:
+    - worthlessness
+    - self_dislike
+    - self_criticalness
+    - self_failure
+    inverse_symptoms:
+    - feeling_good
+    factor: Negative self-reflection
+    direction: 1
+severity:
+  severity:
+    symptoms:
+    - sadness
+    - interest_loss
+    - pleasure_loss
+    - appetite_decrease
+    - appetite_increase
+    - weight_decrease
+    - weight_increase
+    - insomnia_early
+    - insomnia_middle
+    - insomnia_late
+    - hypersomnia
+    - agitation
+    - retardation
+    - fatigue
+    - energy_loss
+    - worthlessness
+    - guilt
+    - concentration_dysfunction
+    - indiciciveness
+    - si
+    note: DSM-5 MDD criterion A items; composite = mean
+    ordinal: true
+depemo:
+  emo_sadness:
+    symptoms:
+    - sadness
+  emo_hopelessness:
+    symptoms:
+    - pessimism
+  emo_loneliness:
+    symptoms:
+    - loneliness
+  emo_worthlessness:
+    symptoms:
+    - worthlessness
+  emo_emptiness:
+    symptoms:
+    - feeling_inability
+  emo_suicide:
+    symptoms:
+    - si
+  emo_anger:
+    symptoms:
+    - irritability
+  emo_brain:
+    symptoms:
+    - concentration_dysfunction
+redsm5:
+  dsm_depressed_mood:
+    symptoms:
+    - sadness
+    - pessimism
+    - feeling_inability
+    - crying
+    aggregate: max
+  dsm_anhedonia:
+    symptoms:
+    - interest_loss
+    - pleasure_loss
+    aggregate: max
+  dsm_appetite_change:
+    symptoms:
+    - appetite_decrease
+    - appetite_increase
+    - weight_decrease
+    - weight_increase
+    aggregate: max
+  dsm_sleep_issues:
+    symptoms:
+    - insomnia_early
+    - insomnia_middle
+    - insomnia_late
+    - hypersomnia
+    aggregate: max
+    factor: Sleep disturbance
+  dsm_psychomotor:
+    symptoms:
+    - agitation
+    - retardation
+    aggregate: max
+  dsm_fatigue:
+    symptoms:
+    - fatigue
+    - energy_loss
+    aggregate: max
+  dsm_worthlessness:
+    symptoms:
+    - worthlessness
+    - guilt
+    aggregate: max
+    factor: Negative self-reflection
+  dsm_cognitive_issues:
+    symptoms:
+    - concentration_dysfunction
+    - indiciciveness
+    aggregate: max
+  dsm_suicidal_thoughts:
+    symptoms:
+    - si
+    aggregate: max
+    factor: Self-harm tendency
+_reduced_protocol:
+  note: 'Reduced on-device protocol (Apple-silicon laptop, llama.cpp): only the symptoms
+    mapped above are scored, plus three pre-specified control symptoms for the IRF
+    and LoST datasets that are not conceptually related to the labels (discriminant
+    check). Severity uses its 20 criterion-A items. Factor-score validation (needs
+    all 52 items) is not part of the reduced protocol.'
+  controls:
+    irf: &id001
+    - insomnia_early
+    - appetite_decrease
+    - gi_dysfunction
+    lost: *id001
+    severity: []

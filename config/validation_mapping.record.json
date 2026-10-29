@@ -1,0 +1,14 @@
+{
+ "file": "config/validation_mapping.yaml",
+ "sha256": "214e9f23469ba9d279e8887d09ac96428c77dc5093c465a4b6e099e02352e155",
+ "recorded_utc": "2026-10-01T05:06:59+00:00",
+ "lm_qa_validation_outputs_present_at_recording": false,
+ "note": "Recorded before any LM-QA output on the validation datasets existed; the analysis (step 14) reads this file unchanged.",
+ "history": [
+  {
+   "sha256": "bf2d60f4c778c5048c55c382b2d752164aca7466b50eea79d0ba75a9275760f4",
+   "recorded_utc": "2026-10-01T03:20:13+00:00"
+  }
+ ],
+ "change": "added the reduced-protocol control symptoms (before any LM-QA validation output existed)"
+}

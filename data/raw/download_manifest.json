@@ -1,0 +1,34 @@
+{
+  "source": "https://zissou.infosci.cornell.edu/convokit/datasets/subreddit-corpus/",
+  "retrieved_utc": "2026-10-01T00:27:44Z",
+  "files": [
+    {
+      "subreddit": "depression",
+      "url": "https://zissou.infosci.cornell.edu/convokit/datasets/subreddit-corpus/corpus-zipped/democrats12~-~depression/depression.corpus.zip",
+      "file": "depression.corpus.zip",
+      "bytes": 702851424,
+      "sha256": "3b4e2bac45df2649e94c372c1bee8e5d210fbc65174c65c2c54a3e15ea815868",
+      "members": [
+        "users.json",
+        "conversations.json",
+        "corpus.json",
+        "index.json",
+        "utterances.jsonl"
+      ]
+    },
+    {
+      "subreddit": "Anxiety",
+      "url": "https://zissou.infosci.cornell.edu/convokit/datasets/subreddit-corpus/corpus-zipped/AnnArborArtists~-~AnythingGoesNews/Anxiety.corpus.zip",
+      "file": "Anxiety.corpus.zip",
+      "bytes": 242961641,
+      "sha256": "512898716c76cf156fc2f0e9f7ec033775520ff4a3de03a32a9918ddd1ac181f",
+      "members": [
+        "users.json",
+        "conversations.json",
+        "corpus.json",
+        "index.json",
+        "utterances.jsonl"
+      ]
+    }
+  ]
+}

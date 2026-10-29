@@ -1,0 +1,38 @@
+# Pre-specified correspondence between the items of the two standard inventories that the
+# original lab administered with the same model (job 7f390e2d, notebook 03b-clin_corr:
+# BDI-II and PHQ-9, first-person "self-report" role, 0-3 options, 5 samples per item)
+# and the 52-item TALQ battery (third-person clinician role, 0-100 rubric).
+# Written from the item titles and wording only, before any inventory rating was analysed.
+# aggregate: how several battery items are combined for one inventory item (mean or max).
+bdi2:
+  1:  {title: Sadness, symptoms: [sadness]}
+  2:  {title: Pessimism, symptoms: [pessimism]}
+  3:  {title: Past Failure, symptoms: [self_failure]}
+  4:  {title: Loss of Pleasure, symptoms: [pleasure_loss]}
+  5:  {title: Guilty Feelings, symptoms: [guilt]}
+  6:  {title: Punishment Feelings, symptoms: [self_punishment]}
+  7:  {title: Self-Dislike, symptoms: [self_dislike]}
+  8:  {title: Self-Criticalness, symptoms: [self_criticalness]}
+  9:  {title: Suicidal Thoughts or Wishes, symptoms: [si]}
+  10: {title: Crying, symptoms: [crying]}
+  11: {title: Agitation, symptoms: [agitation]}
+  12: {title: Loss of Interest, symptoms: [interest_loss]}
+  13: {title: Indecisiveness, symptoms: [indiciciveness]}
+  14: {title: Worthlessness, symptoms: [worthlessness]}
+  15: {title: Loss of Energy, symptoms: [energy_loss]}
+  16: {title: Changes in Sleeping Pattern, symptoms: [insomnia_early, insomnia_middle, insomnia_late, hypersomnia], aggregate: max}
+  17: {title: Irritability, symptoms: [irritability]}
+  18: {title: Changes in Appetite, symptoms: [appetite_decrease, appetite_increase], aggregate: max}
+  19: {title: Concentration Difficulty, symptoms: [concentration_dysfunction]}
+  20: {title: Tiredness or Fatigue, symptoms: [fatigue]}
+  21: {title: Loss of Interest in Sex, symptoms: [libido_decrease]}
+phq9:
+  1: {title: Anhedonia, symptoms: [interest_loss, pleasure_loss], aggregate: mean}
+  2: {title: Depressed mood, symptoms: [sadness, pessimism], aggregate: mean}
+  3: {title: Sleep disruption, symptoms: [insomnia_early, insomnia_middle, insomnia_late, hypersomnia], aggregate: max}
+  4: {title: Fatigue, symptoms: [fatigue, energy_loss], aggregate: mean}
+  5: {title: Appetite disruption, symptoms: [appetite_decrease, appetite_increase], aggregate: max}
+  6: {title: Worthlessness / guilt, symptoms: [worthlessness, guilt, self_failure], aggregate: mean}
+  7: {title: Concentration, symptoms: [concentration_dysfunction]}
+  8: {title: Psychomotor retardation, symptoms: [retardation, agitation], aggregate: max}
+  9: {title: Suicidality, symptoms: [si]}

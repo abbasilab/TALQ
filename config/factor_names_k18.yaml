@@ -1,0 +1,31 @@
+# Names of the 18 factors of the K = 18 sensitivity solution (Methods, "Latent mental factors";
+# Extended Data Fig. 5e).  These are the authors' labels, chosen from the symptoms that carry most
+# of each factor's weight in that solution.
+#
+# For K other than 12, scripts/06_nmf.py orders the factors by total loading (the sum of each
+# factor's row of loadings H, largest first), so the names are listed in that order: the first
+# name labels the factor with the largest total loading (column nmf_0), the second the next one
+# (nmf_1), and so on.  They are written to results/<run>/06_nmf_k18.npz, 06_nmf_summary_k18.json
+# and 06_factor_table_k18.csv, and used by every later step run with --tag _k18.
+#
+# Usage:
+#   python3 06_nmf.py --run llama31_8b --k 18 --reps-final 100 --sweep-ks none --tag _k18 \
+#       --names config/factor_names_k18.yaml
+- Depressed mood
+- Diurnal variation
+- Negative self-reflection
+- Withdrawal and indecision
+- Tearfulness
+- Anxious tension
+- Positive wellbeing
+- Feeling needed
+- Panic and arousal
+- Appetite and weight change
+- Sleep disturbance
+- Overwhelm
+- Social strain
+- Fatigue and slowing
+- Emotional instability
+- Self-harm tendency
+- Illness worry
+- Grief

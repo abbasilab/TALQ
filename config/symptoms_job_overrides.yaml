@@ -1,0 +1,8 @@
+# Symptom fields exactly as they were shown to the model in the annotation job
+# (5976943c-4594-46b5-a71a-f1809cf1bfb3). The title of item 17 was misspelled in the prompts
+# ("Indiciciveness"); config/symptoms.yaml gives the correct spelling ("Indecisiveness") for tables and
+# figures. Prompts rendered by this repository use the text below, so that they match the stored model
+# outputs. Checked against all 2,552,836 exported rows (symptom title, description and scale text):
+# this is the only difference.
+indiciciveness:
+  prompt_title: Indiciciveness

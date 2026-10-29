@@ -1,0 +1,7 @@
+{
+ "file": "config/inventory_item_mapping.yaml",
+ "sha256": "9578942223478ef2cf548604daa40b462f0d80b113d815f5295a3bfba4cfda41",
+ "recorded_utc": "2026-10-01T05:51:34+00:00",
+ "inventory_ratings_analysed_at_recording": false,
+ "note": "Recorded after inspecting only item titles, counts and parse rates of job 7f390e2d; no rating was compared with the 52-item battery before this."
+}

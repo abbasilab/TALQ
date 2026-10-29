@@ -1,0 +1,222 @@
+# Model configuration of the annotation pipeline that generated the stored model outputs
+# (transformers 4.44.2, Llama-3.1-8B-Instruct with 4-bit NormalFloat (NF4) weights from bitsandbytes).
+# Kept as a record. Note on sampling: the values under model_config (temperature 0.1, top_k 30,
+# repetition_penalty 1.03) were passed to `from_pretrained`, which stores them on the model
+# configuration without using them for generation. Generation used the checkpoint's own defaults
+# (temperature 0.6, top-p 0.9, top-k 50) with at most 384 new tokens, as stated in the Methods; see
+# GEN_LLAMA31_DEFAULT in src/slm/params.py and --sampling annotation in annotation/run_vllm_annotation.py.
+# The chat template below inserts a beginning-of-sequence token, and the tokenizer adds another one,
+# so prompts started with two such tokens (reproduced by --double-bos in the vLLM runner).
+
+llama-3.1-8B-instruct-doubled:
+
+  model_id: meta-llama/Meta-Llama-3.1-8B-Instruct
+
+  quantization_config:
+    load_in_4bit: True
+    bnb_4bit_quant_type: "nf4"
+    bnb_4bit_compute_dtype: "float16"
+    bnb_4bit_use_double_quant: True
+
+  model_copies: 4
+#   model_copy_config:
+  #   - max_memory:
+  #       0: 32GB
+  #   - max_memory:
+  #       1: 32GB
+  #   - max_memory:
+  #       2: 32GB
+  #   - max_memory:
+  #       3: 32GB
+    # - max_memory:
+    #     4: 32GB
+    # - max_memory:
+    #     5: 32GB
+    # - max_memory:
+    #     6: 32GB
+    # - max_memory:
+    #     7: 32GB
+  model_copy_config:
+    - max_memory:
+        0: 32GB
+    - max_memory:
+        0: 32GB
+    - max_memory:
+        1: 32GB
+    - max_memory:
+        1: 32GB
+    - max_memory:
+        2: 32GB
+    - max_memory:
+        2: 32GB
+    - max_memory:
+        3: 32GB
+    - max_memory:
+        3: 32GB
+    - max_memory:
+        4: 32GB
+    - max_memory:
+        4: 32GB
+    - max_memory:
+        5: 32GB
+    - max_memory:
+        5: 32GB
+    - max_memory:
+        6: 32GB
+    - max_memory:
+        6: 32GB
+    - max_memory:
+        7: 32GB
+    - max_memory:
+        7: 32GB
+
+  model_config:
+    do_sample: True
+    device_map: 'auto'
+    # max_memory:
+    #   2: 32GB
+    top_k: 30
+    temperature: 0.1
+    repetition_penalty: 1.03
+  
+  pipeline_config:
+    return_full_text: False
+    max_new_tokens: 256
+
+  set_model_pad_token_id: True
+
+  chat_template: >-
+    {% if messages[0]['role'] == 'system' %}
+        {% set offset = 1 %}
+    {% else %}
+        {% set offset = 0 %}
+    {% endif %}
+
+    {{ bos_token }}
+    {% for message in messages %}
+        {% if (message['role'] == 'user') != (loop.index0 % 2 == offset) %}
+            {{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}
+        {% endif %}
+
+        {{ '<|start_header_id|>' + message['role'] + '<|end_header_id|>\n\n' + message['content'] | trim + '<|eot_id|>' }}
+    {% endfor %}
+
+    {% if add_generation_prompt %}
+        {{ '<|start_header_id|>' + 'assistant' + '<|end_header_id|>\n\n' }}
+    {% endif %}
+
+llama-3.1-8B-instruct:
+
+  model_id: meta-llama/Meta-Llama-3.1-8B-Instruct
+
+  quantization_config:
+    load_in_4bit: True
+    bnb_4bit_quant_type: "nf4"
+    bnb_4bit_compute_dtype: "float16"
+    bnb_4bit_use_double_quant: True
+
+  model_copies: 1
+  model_copy_config:
+    - max_memory:
+        0: 32GB
+        1: 32GB
+    # - max_memory:
+    #     1: 32GB
+    # - max_memory:
+    #     2: 32GB
+    # - max_memory:
+    #     3: 32GB
+    # - max_memory:
+    #     4: 32GB
+    # - max_memory:
+    #     5: 32GB
+    # - max_memory:
+    #     6: 32GB
+    # - max_memory:
+    #     7: 32GB
+
+  model_config:
+    do_sample: True
+    device_map: 'auto'
+    # max_memory:
+    #   2: 32GB
+    top_k: 30
+    temperature: 0.1
+    repetition_penalty: 1.03
+  
+  pipeline_config:
+    return_full_text: False
+    # max_new_tokens: 256
+    max_new_tokens: 384
+
+  set_model_pad_token_id: True
+
+  chat_template: >-
+    {% if messages[0]['role'] == 'system' %}
+        {% set offset = 1 %}
+    {% else %}
+        {% set offset = 0 %}
+    {% endif %}
+
+    {{ bos_token }}
+    {% for message in messages %}
+        {% if (message['role'] == 'user') != (loop.index0 % 2 == offset) %}
+            {{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}
+        {% endif %}
+
+        {{ '<|start_header_id|>' + message['role'] + '<|end_header_id|>\n\n' + message['content'] | trim + '<|eot_id|>' }}
+    {% endfor %}
+
+    {% if add_generation_prompt %}
+        {{ '<|start_header_id|>' + 'assistant' + '<|end_header_id|>\n\n' }}
+    {% endif %}
+
+#
+
+llama-3.1-70B-instruct:
+
+  model_id: meta-llama/Meta-Llama-3.1-70B-Instruct
+
+  quantization_config:
+    load_in_4bit: True
+    bnb_4bit_quant_type: "nf4"
+    bnb_4bit_compute_dtype: "float16"
+    bnb_4bit_use_double_quant: True
+
+  model_config:
+    device_map: 'auto'
+    max_memory:
+      1: 32GB
+      # 7: 32GB
+      # 2: 32GB
+      # 3: 32GB
+    do_sample: True
+    top_k: 30
+    temperature: 0.1
+    repetition_penalty: 1.03
+  
+  pipeline_config:
+    return_full_text: False
+    max_new_tokens: 128
+
+  set_model_pad_token_id: True
+
+  chat_template: >-
+    {% if messages[0]['role'] == 'system' %}
+        {% set offset = 1 %}
+    {% else %}
+        {% set offset = 0 %}
+    {% endif %}
+
+    {{ bos_token }}
+    {% for message in messages %}
+        {% if (message['role'] == 'user') != (loop.index0 % 2 == offset) %}
+            {{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}
+        {% endif %}
+
+        {{ '<|start_header_id|>' + message['role'] + '<|end_header_id|>\n\n' + message['content'] | trim + '<|eot_id|>' }}
+    {% endfor %}
+
+    {% if add_generation_prompt %}
+        {{ '<|start_header_id|>' + 'assistant' + '<|end_header_id|>\n\n' }}
+    {% endif %}

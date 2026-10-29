@@ -1,0 +1,567 @@
+- number: 1
+  shortcode: insomnia_early
+  title: Initial insomnia
+  title_short: Insomnia (early)
+  omit: False
+  description: |-
+    Difficulty falling asleep at the beginning of the night
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 2
+  shortcode: insomnia_middle
+  title: Sleep maintenance insomnia
+  title_short: Insomnia (middle)
+  omit: False
+  description: |-
+    Difficulty maintaining sleep in the middle of the night; waking up multiple times in the middle of the night
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 3
+  shortcode: insomnia_late
+  title: Late insomnia
+  title_short: Insomnia (late)
+  omit: False
+  description: |-
+    Difficulty with early morning awakenings; waking up before one intended to, and being unable to fall back asleep
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 4
+  shortcode: hypersomnia
+  title: Hypersomnia
+  title_short: Hypersomnia
+  omit: False
+  description: |-
+    Excessive daytime sleepiness despite getting adequate sleep; falling asleep multiple times during the day
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 5
+  shortcode: sadness
+  title: Sad mood
+  title_short: Sad
+  omit: True
+  description: |-
+    TODO
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 6
+  shortcode: anxiety
+  title: Anxiousness / Fearful mood
+  title_short: Anxious
+  omit: False
+  description: |-
+    Apprehension or uneasiness that stems from the anticipation of danger, which may be internal or external
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 7
+  shortcode: panic
+  title: Panic / Phobic symptoms
+  title_short: Panic/Phobic
+  omit: False
+  description: |-
+    Sense of immediately impending doom or danger; fear of loss of control or death; shortness of breath or throat tightness; dizziness, lightheadedness, ro faintness. Can be accompanied by feelings of unreality or detachment.
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 8
+  shortcode: irritability
+  title: Irritable mood
+  title_short: Irritable
+  omit: False
+  description: |-
+    Proneness to anger from small frustrations or negative events
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 9
+  shortcode: reactivity
+  title: Emotional reactivity
+  title_short: Reactive
+  omit: False
+  description: |-
+    Responding immediately with strong emotions to small events or other stimuli, with decreased ability to regulate this emotional response
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 10
+  shortcode: diurnal_variation
+  title: Diurnal variation
+  title_short: Diurnal var.
+  omit: True
+  description: |-
+    Client's symptoms change in intensity in a consistent pattern over the course of each day
+  scale:
+    - 0: Diurnal pattern is entirely absent
+    - 100: Diurnal pattern is present every day
+
+- number: 11
+  shortcode: grief
+  title: Grief
+  title_short: Grief
+  omit: False
+  description: |-
+    Subjective feeling that emotional responses are tied to a personal loss and ensuing feelings of absence
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 12
+  shortcode: appetite_decrease
+  title: Decreased appetite
+  title_short: Appetite $\downarrow$
+  omit: True
+  description: ""
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 13
+  shortcode: appetite_increase
+  title: Increased appetite
+  title_short: Appetite $\uparrow$
+  omit: True
+  description: ""
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 14
+  shortcode: weight_decrease
+  title: Weight loss
+  title_short: Weight $\downarrow$
+  omit: True
+  description: ""
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+- number: 15
+  shortcode: weight_increase
+  title: Weight gain
+  title_short: Weight $\uparrow$
+  omit: True
+  description: ""
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 16
+  shortcode: concentration_dysfunction
+  title: Concentration problems
+  title_short: Concentration
+  omit: False
+  description: |-
+    Difficulty in focusing on the task at hand while ignoring distractions, especially for longer periods or more intense tasks
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 17
+  # shortcode spelled as in the stored model outputs; the title shown to the model is in
+  # config/symptoms_job_overrides.yaml
+  shortcode: indiciciveness
+  title: Indecisiveness
+  title_short: Indecisive
+  omit: False
+  description: |-
+    Inability to, or difficulty in, making any kind of choice in the client's daily life
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 18
+  shortcode: guilt
+  title: Guilt
+  title_short: Guilt
+  omit: False
+  description: |-
+    Client feels that they are emotionally responsible for negative outcomes in their own life or the lives of others around them, even when that may not be supported by evidence or believed by other observers
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 19
+  shortcode: worthlessness
+  title: Worthlessness
+  title_short: Worthless
+  omit: False
+  description: |-
+    Client feels low self-esteem, that they are of little or no value as a person
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 20
+  shortcode: pessimism
+  title: Pessimism
+  title_short: Pessimism
+  omit: False
+  description: |-
+    Hopelessness about the future
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 21
+  shortcode: si
+  title: Suicidal ideation
+  title_short: S.I.
+  omit: False
+  description: |-
+    Thoughts, ideas, or ruminations that the client would be better off dead, the possibility of ending the client's own life, or specific circumstances or planned actions around ending the client's own life
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 22
+  shortcode: interest_loss
+  title: Loss of interest
+  title_short: Interest $\downarrow$
+  omit: False
+  description: |-
+    The client no longer has a desire to do things that once brought them pleasure
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 23
+  shortcode: pleasure_loss
+  title: Loss of pleasure
+  title_short: Pleasure $\downarrow$
+  omit: False
+  description: |-
+    Things that the client once experienced as pleasurable are no longer experienced as pleasurable
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 24
+  shortcode: fatigue
+  title: Fatigue
+  title_short: Fatigue
+  omit: False
+  description: |-
+    Persistent exhaustion, malaise, aversion to activity, or impaired performance on activities
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 25
+  shortcode: energy_loss
+  title: Loss of energy
+  title_short: Energy $\downarrow$
+  omit: False
+  description: |-
+    Loss or decreased frequency of periods of incresed drive to activity
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 26
+  shortcode: libido_decrease
+  title: Decreased libido
+  title_short: Libido $\downarrow$
+  omit: True
+  description: ""
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 27
+  shortcode: retardation
+  title: Psychomotor retardation
+  title_short: Slowing
+  omit: False
+  description: |-
+    Slowing down or reduction of thought, speech, affect, or physical movements
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 28
+  shortcode: agitation
+  title: Psychomotor agitation
+  title_short: Agitation
+  omit: False
+  description: |-
+    Excessive and uncontrolled mental and/or motor activity
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 29
+  shortcode: somatization
+  title: Somatic complaints
+  title_short: Somatizing
+  omit: False
+  description: |-
+    Reports of symptoms in the body, like pain, headaches, or tingling, that are not overtly explained by another medical cause
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 30
+  shortcode: arousal
+  title: Sympathetic arousal
+  title_short: Arousal
+  omit: False
+  description: |-
+    Including palpitations, tinnitus, chest pain, tremors
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 31
+  shortcode: gi_dysfunction
+  title: Gastrointestinal problems
+  title_short: GI
+  omit: False
+  description: |-
+    Including constipation, diarrhea
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 32
+  shortcode: ip_sensitivity
+  title: Interpersonal sensitivity
+  title_short: IP Sensitivity
+  omit: False
+  description: |-
+    Vulnerability and increased response to perceived signs of social rejection
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 33
+  shortcode: paralysis
+  title: Leaden paralysis
+  title_short: Leaden
+  omit: False
+  description: |-
+    Feeling of increased weight in the extremities that makes it more difficult to do activities
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 34
+  shortcode: self_failure
+  title: Emphasis on past failure
+  title_short: Failure
+  omit: False
+  description: |-
+    Persistent rumination on thoughts or memories that the client perceives as demonstrating their personal failure in the past
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 35
+  shortcode: self_punishment
+  title: Punishment feelings
+  title_short: Punishment
+  omit: False
+  description: |-
+    Feeling that the client is deserving of being puniushed, either in response to past failures or because of feeling intrinsically worthless
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 36
+  shortcode: self_dislike
+  title: Self-dislike
+  title_short: Self-dislike
+  omit: True
+  description: |-
+    TODO
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 37
+  shortcode: self_criticalness
+  title: Self-criticalness
+  title_short: Self-critical
+  omit: False
+  description: |-
+    Persistent emphasis or rumination on how events or stimuli reflect negative aspects of the client
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 38
+  shortcode: crying
+  title: Crying
+  title_short: Crying
+  omit: False
+  description: |-
+    Crying more than the client has in the past, or crying at moments in which there is no stimulus or minimal stimulus evoking the response
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 39
+  shortcode: loneliness
+  title: Loneliness
+  title_short: Lonely
+  omit: False
+  description: |-
+    Unpleasant emotional response or psychological pain in response to perceived social isolation
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 40
+  shortcode: effort_excess
+  title: Excessive effort
+  title_short: Effort $\uparrow$
+  omit: False
+  description: |-
+    Subjective feeling that everything the client does takes effort
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 41
+  shortcode: talk_less
+  title: Talking less
+  title_short: Talking $\downarrow$
+  omit: False
+  description: |-
+    Client perceives that they talk less than they have in the past
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 42
+  shortcode: others_unfriendly
+  title: Feeling that "Other people were unfriendly to me"
+  title_short: Others unfriendly
+  omit: False
+  description: |-
+    Subjective feeling that others have acted recently in a way that was unfriendly to the client
+  scale:
+    - 0: Feeling is entirely absent
+    - 100: Feeling is present every day
+
+- number: 43
+  shortcode: others_dislike
+  title: Feeling that "Other people dislike me"
+  title_short: Others dislike
+  omit: False
+  description: |-
+    Subjective feeling that others dislike the client
+  scale:
+    - 0: Feeling is entirely absent
+    - 100: Feeling is present every day
+
+- number: 44
+  shortcode: feeling_bothered
+  title: Feeling bothered
+  title_short: Bothered
+  omit: False
+  description: |-
+    Subjective feeling that things which usually wouldn't bother the client, or have not in the past, seem more bothersome at present
+  scale:
+    - 0: Feeling is entirely absent
+    - 100: Feeling is present every day
+
+- number: 45
+  shortcode: feeling_good
+  title: Feeling as good as other people
+  title_short: As good
+  omit: False
+  description: |-
+    Client believes that how they feel is about as good as how the others around them in the world feel
+  scale:
+    - 0: Feeling is entirely absent
+    - 100: Feeling is present every day
+
+- number: 46
+  shortcode: feeling_happy
+  title: Feeling happy
+  title_short: Happy
+  omit: True
+  description: |-
+    TODO
+  scale:
+    - 0: Feeling is entirely absent
+    - 100: Feeling is present every day
+
+- number: 47
+  shortcode: feeling_needed
+  title: Feeling useful to or needed by others
+  title_short: Needed
+  omit: True
+  description: |-
+    TODO
+  scale:
+    - 0: Feeling is entirely absent
+    - 100: Feeling is present every day
+
+- number: 48
+  shortcode: life_full
+  title: Feeling that life is full
+  omit: False
+  title_short: Life full
+  description: |-
+    In a negative, overwhelming sense: that is, the client reports that their life is over-full of too many different things
+  scale:
+    - 0: Feeling is entirely absent
+    - 100: Feeling is present every day
+
+- number: 49
+  shortcode: inner_tension
+  title: Inner tension
+  title_short: Tension
+  omit: False
+  description: |-
+    Feelings of ill-defined discomfort, inner turmoil, edginess, mounting panic or dread
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 50
+  shortcode: feeling_inability
+  title: Inability to feel
+  title_short: Feeling $\downarrow$
+  omit: False
+  description: |-
+    Client does not have emotional responses to stimuli around them, positive or negative; experiencing emotional "numbness"
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 51
+  shortcode: hypochondriasis
+  title: Hypochondriasis
+  title_short: Hypochondriasis
+  omit: True
+  description: |-
+    Excessive and persistent fear of, or preoccupation with, having or developing a severe illness
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day
+
+- number: 52
+  shortcode: insight_loss
+  title: Loss of insight
+  title_short: Insight $\downarrow$
+  omit: True
+  description: |-
+    Client exhibits a reduced awareness that they have mental difficulty, a reduced understanding that their feelings and behavior stem from underlying mental difficulties, and/or a reduced awareness of the need to seek or maintain treatment for mental difficulties
+  scale:
+    - 0: Symptom is entirely absent
+    - 100: Symptom is present every day

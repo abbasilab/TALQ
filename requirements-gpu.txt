@@ -1,0 +1,8 @@
+# Environment for annotating windows with a language model on GPUs (annotation/run_vllm_annotation.py).
+# Install on the GPU machine with: python3 -m pip install -r requirements-gpu.txt
+vllm>=0.6
+transformers
+pandas
+pyarrow
+pyyaml
+bitsandbytes   # only for --quantization bnb4 (4-bit NormalFloat weights, as for the stored outputs)
