@@ -122,7 +122,7 @@ account names or text.
 @article{levesque2026talq,
   title   = {TALQ: A reproducible language model questionnaire for dense measurement of depressive and anxious states},
   author  = {Levesque, Maxine and Poskanzer, Kira and Woolley, Joshua and Abbasi-Asl, Reza},
-  journal = {psyrxiv},
+  journal = {medRxiv},
   year    = {2026}
 }
 ```
